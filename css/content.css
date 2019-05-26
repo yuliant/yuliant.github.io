@@ -1,0 +1,12 @@
+.jumbotron {
+  padding: 30px 200px 0;
+  height: auto;
+  margin-bottom : 0px;
+  background: #EDEDED;
+}
+
+.jumbotron img{
+  width: 60%;
+  display: block;
+  margin: auto;
+}
