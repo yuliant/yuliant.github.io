@@ -193,7 +193,7 @@
 
           <div class="col-lg-6">
 
-            <form id="gform" method="post" action="https://script.google.com/macros/s/AKfycby2GhBTSUyUGfOjacgijMlyuatEmoguTnag9NyLJ6MzznQDJCpH/exec
+            <form method="post" onSubmit="return validasi(this);" action="https://script.google.com/macros/s/AKfycby2GhBTSUyUGfOjacgijMlyuatEmoguTnag9NyLJ6MzznQDJCpH/exec
 ">
               <div class="form-group">
                 <label for="nama">Nama</label>
@@ -241,9 +241,32 @@
 
 
     <!-- Optional JavaScript -->
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
   </body>
+  <script type="text/javascript">
+    function validasi(form) {
+      var nama = document.getElementById("nama").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+
+      var atpos=email.indexOf("@");
+      var dotpos=email.lastIndexOf(".");
+      if (nama == "" || email=="" || message =="") {
+        alert('You must complete the data completely and true !');
+        return false;
+
+      }else if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length){
+        alert('You must complete the data completely and true !');
+        return false;
+
+      }else{
+        return true;
+      }
+
+    }
+  </script>
 </html>
