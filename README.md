@@ -1,7 +1,7 @@
 # Programmer
 
 #### Keahlian: Codeigniter, Laravel, Bootstrap, Android Studio (Java)
-![My Skills](https://skillicons.dev/icons?i=laravel,php,androidstudio,java,mysql,postman,ps)
+![My Skills](https://skillicons.dev/icons?i=laravel,php,androidstudio,java,mysql,bootstrap,postman,ps)
 
 ## 🧑‍🎓 Pendidikan
 <!-- - M.Kom., Sistem Informasi | Institut Sains dan Teknologi Terpadu Surabaya  (_2022 - Sekarang_) -->
