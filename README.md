@@ -1,7 +1,7 @@
 # Programmer
 
 #### Keahlian: Codeigniter, Laravel, Bootstrap, Android Studio (Java)
-[![My Skills](https://skillicons.dev/icons?i=laravel,php,androidstudio,java,mysql,postman,ps)](https://skillicons.dev)
+![My Skills](https://skillicons.dev/icons?i=laravel,php,androidstudio,java,mysql,postman,ps)
 
 ## 🧑‍🎓 Pendidikan
 <!-- - M.Kom., Sistem Informasi | Institut Sains dan Teknologi Terpadu Surabaya  (_2022 - Sekarang_) -->
@@ -21,19 +21,20 @@
     `PT. Bumi Jatikalang Sejahtera adalah perusahaan yang bergerak dalam bidang perumahan (developer) yang mengutamakan kualitas dan pelayanan. saya disini mendapatkan beberapa job Seperti mengembangkan aplikasi android untuk pemasaran perusahaan dan mendesaign ulang web perusahaan yang ada.`
 
 ## 👨‍💻 Projek Mandiri
-1. Sistem Presensi Karyawan (_Lembaga Pendidikan Al Falah Surabaya, 2022_)
+1. Sistem Presensi Karyawan ([_Lembaga Pendidikan Al Falah Surabaya, 2022_](https://presensi.alfalahsby.sch.id/))
 2. Sistem PPDB Online
-    - @_Lembaga Pendidikan Al Falah Surabaya, 2022_
-    - @_SMA PGRI 1 Sidoarjo, 2020_
+    - @[_Lembaga Pendidikan Al Falah Surabaya, 2022_](https://pmb.alfalahsby.sch.id/)
+    - @[_SMA PGRI 1 Sidoarjo, 2020_](http://www.ppdb.smagrisda.sch.id/)
 3. Web Profil Perusahaan
-    - @_Yayasan Masjid Al Falah Surabaya, 2023_
-    - @_Lembaga Pendidikan Al Falah Surabaya, 2023_
-    - @_SMK Dharma Wirawan 2, 2020_
-    - @_PT Mitrakarya Pompa Indonesia, 2020_
-    - @_PT Nusaka Mitrajaya Optima, 2020_
+    - @[_Yayasan Masjid Al Falah Surabaya, 2023_](https://masjidalfalah.or.id/)
+    - @[_Lembaga Pendidikan Al Falah Surabaya, 2023_](http://alfalahsby.sch.id/)
+    - @[_Kantor Imigrasi Kelas II TPI Labuan Bajo, 2022_](https://imigrasilabuanbajo.id/)
+    - @[_SMK Dharma Wirawan 2, 2020_](https://smkdwdua.sch.id/)
+    - @[_PT Mitrakarya Pompa Indonesia, 2020_](https://mitrapompa.co.id/)
+    - @[_PT Nusaka Mitrajaya Optima, 2020_](https://nusakamitraoptima.com/)
 4. Web Si Mael Penida (_Kantor Imigrasi Kelas I TPI Denpasar, 2021_)
 5. Web Local Sistem Qrcode Tilang (_Kejaksaan Negeri Sidoarjo, 2019_)
-6. Mengelola Akun Playstore (_Alfalah Surabaya_)
+6. Mengelola Akun Playstore ([_Lembaga Pendidikan Al Falah Surabaya_](https://play.google.com/store/apps/developer?id=Lembaga+Pendidikan+Al-Falah+Surabaya))
     <!-- [Publication](https://www.mdpi.com/1424-8220/22/8/3048) -->
     <!-- Developed objective strategy for discovering optimal EEG bands based on signal power spectra using **Python**. This data-driven approach led to better characterization of the underlying power spectrum by identifying bands that outperformed the more commonly used band boundaries by a factor of two. The proposed method provides a fully automated and flexible approach to capturing key signal components and possibly discovering new indices of brain activity. -->
     <!-- ![EEG Band Discovery](/assets/img/eeg_band_discovery.jpeg) -->
