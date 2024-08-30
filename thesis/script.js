@@ -1,6 +1,16 @@
 $(document).ready(function () {
       // Initialize Chosen.js
-      $('.chosen-select').chosen();
+      // $('.chosen-select').Choices();
+      const elementban = document.querySelector('.ban-select');
+      const choicesban = new Choices(elementban,{
+         removeItemButton: true,
+         duplicateItemsAllowed: false,
+      });
+      const element = document.querySelector('.chosen-select');
+      const choices = new Choices(element,{
+         removeItemButton: true,
+         duplicateItemsAllowed: false,
+      });
 
       // Array to hold selected items in the order they were selected
       let selectedItems = [];
