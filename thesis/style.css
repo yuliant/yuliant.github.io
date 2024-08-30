@@ -1,0 +1,31 @@
+/* Set the select element to be 100% wide within its container */
+.chosen-container {
+  width: 100% !important;
+}
+
+/* Adjust the input box within Chosen */
+.chosen-container .chosen-drop .chosen-search input[type="text"] {
+  width: 100% !important;
+}
+
+/* Ensure the chosen container adapts to screen size changes */
+@media (max-width: 768px) {
+  .chosen-container {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chosen-container {
+    font-size: 12px;
+  }
+
+  .chosen-container .chosen-single {
+    height: auto;
+    line-height: 1.4em;
+  }
+
+  .chosen-container .chosen-drop {
+    width: 100% !important;
+  }
+}

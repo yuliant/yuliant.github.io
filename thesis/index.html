@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Rekomendasi Drafpick MLBB</title>
+  <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 mt-4">
+        <div class="card">
+          <div class="card-header">
+            <h3>Sistem Rekomendasi Drafpick MLBB</h3>
+          </div>
+          <div class="card-body">
+  
+            <label for="baseUrl" class="form-label">URL Rest API</label>
+            <input type="text" class="form-control mb-3" name="baseUrl" id="baseUrl" placeholder="https://yyy.com"
+              required />
+
+            <label for="metode" class="form-label">Metode</label>
+            <select class="form-control mb-3" name="metode" id="metode" data-placeholder="Pilih metode...">
+              <option value="mlp">MLP</option>
+              <option value="bilstm">BiLSTM</option>
+            </select>
+
+            <label for="banData" class="form-label">Daftar Ban</label>
+            <select class="form-control chosen-select" name="banData" id="banData" data-placeholder="Input urutan hero..."
+              multiple style="width: 100%;">
+              <option value="Miya">Miya</option>
+              <option value="Balmond">Balmond</option>
+              <option value="Saber">Saber</option>
+              <option value="Alice">Alice</option>
+              <option value="Nana">Nana</option>
+              <option value="Tigreal">Tigreal</option>
+              <option value="Alucard">Alucard</option>
+              <option value="Karina">Karina</option>
+              <option value="Akai">Akai</option>
+              <option value="Franco">Franco</option>
+              <option value="Bane">Bane</option>
+              <option value="Bruno">Bruno</option>
+              <option value="Clint">Clint</option>
+              <option value="Rafaela">Rafaela</option>
+              <option value="Eudora">Eudora</option>
+              <option value="Zilong">Zilong</option>
+              <option value="Fanny">Fanny</option>
+              <option value="Layla">Layla</option>
+              <option value="Minotaur">Minotaur</option>
+              <option value="Lolita">Lolita</option>
+              <option value="Hayabusa">Hayabusa</option>
+              <option value="Freya">Freya</option>
+              <option value="Gord">Gord</option>
+              <option value="Natalia">Natalia</option>
+              <option value="Kagura">Kagura</option>
+              <option value="Chou">Chou</option>
+              <option value="Sun">Sun</option>
+              <option value="Alpha">Alpha</option>
+              <option value="Ruby">Ruby</option>
+              <option value="Yi Sun-shin">Yi Sun-shin</option>
+              <option value="Moskov">Moskov</option>
+              <option value="Johnson">Johnson</option>
+              <option value="Cyclops">Cyclops</option>
+              <option value="Estes">Estes</option>
+              <option value="Hilda">Hilda</option>
+              <option value="Aurora">Aurora</option>
+              <option value="Lapu-Lapu">Lapu-Lapu</option>
+              <option value="Vexana">Vexana</option>
+              <option value="Roger">Roger</option>
+              <option value="Karrie">Karrie</option>
+              <option value="Gatotkaca">Gatotkaca</option>
+              <option value="Harley">Harley</option>
+              <option value="Irithel">Irithel</option>
+              <option value="Grock">Grock</option>
+              <option value="Argus">Argus</option>
+              <option value="Odette">Odette</option>
+              <option value="Lancelot">Lancelot</option>
+              <option value="Diggie">Diggie</option>
+              <option value="Hylos">Hylos</option>
+              <option value="Zhask">Zhask</option>
+              <option value="Helcurt">Helcurt</option>
+              <option value="Pharsa">Pharsa</option>
+              <option value="Lesley">Lesley</option>
+              <option value="Jawhead">Jawhead</option>
+              <option value="Angela">Angela</option>
+              <option value="Gusion">Gusion</option>
+              <option value="Valir">Valir</option>
+              <option value="Martis">Martis</option>
+              <option value="Uranus">Uranus</option>
+              <option value="Hanabi">Hanabi</option>
+              <option value="Chang'e">Chang'e</option>
+              <option value="Kaja">Kaja</option>
+              <option value="Selena">Selena</option>
+              <option value="Aldous">Aldous</option>
+              <option value="Claude">Claude</option>
+              <option value="Vale">Vale</option>
+              <option value="Leomord">Leomord</option>
+              <option value="Lunox">Lunox</option>
+              <option value="Hanzo">Hanzo</option>
+              <option value="Belerick">Belerick</option>
+              <option value="Kimmy">Kimmy</option>
+              <option value="Thamuz">Thamuz</option>
+              <option value="Harith">Harith</option>
+              <option value="Minsitthar">Minsitthar</option>
+              <option value="Kadita">Kadita</option>
+              <option value="Faramis">Faramis</option>
+              <option value="Badang">Badang</option>
+              <option value="Khufra">Khufra</option>
+              <option value="Granger">Granger</option>
+              <option value="Guinevere">Guinevere</option>
+              <option value="Esmeralda">Esmeralda</option>
+              <option value="Terizla">Terizla</option>
+              <option value="X.Borg">X.Borg</option>
+              <option value="Ling">Ling</option>
+              <option value="Dyrroth">Dyrroth</option>
+              <option value="Lylia">Lylia</option>
+              <option value="Baxia">Baxia</option>
+              <option value="Masha">Masha</option>
+              <option value="Wanwan">Wanwan</option>
+              <option value="Silvanna">Silvanna</option>
+              <option value="Carmilla">Carmilla</option>
+              <option value="Cecilion">Cecilion</option>
+              <option value="Atlas">Atlas</option>
+              <option value="Popol and Kupa">Popol and Kupa</option>
+              <option value="Yu Zhong">Yu Zhong</option>
+              <option value="Luo Yi">Luo Yi</option>
+              <option value="Benedetta">Benedetta</option>
+              <option value="Khaleed">Khaleed</option>
+              <option value="Barats">Barats</option>
+              <option value="Brody">Brody</option>
+              <option value="Yve">Yve</option>
+              <option value="Mathilda">Mathilda</option>
+              <option value="Paquito">Paquito</option>
+              <option value="Gloo">Gloo</option>
+              <option value="Beatrix">Beatrix</option>
+              <option value="Phoveus">Phoveus</option>
+              <option value="Natan">Natan</option>
+              <option value="Aulus">Aulus</option>
+              <option value="Aamon">Aamon</option>
+              <option value="Floryn">Floryn</option>
+              <option value="Valentina">Valentina</option>
+              <option value="Edith">Edith</option>
+              <option value="Yin">Yin</option>
+              <option value="Melissa">Melissa</option>
+              <option value="Xavier">Xavier</option>
+              <option value="Julian">Julian</option>
+              <option value="Fredrinn">Fredrinn</option>
+              <option value="Joy">Joy</option>
+              <option value="Arlott">Arlott</option>
+              <option value="Novaria">Novaria</option>
+              <option value="Ixia">Ixia</option>
+              <option value="Nolan">Nolan</option>
+              <option value="Cici">Cici</option>
+            </select>
+
+            <label for="predictData" class="form-label mt-3">Urutan Draf Pick</label>
+            <select class="form-control chosen-select" name="predictData" id="predictData" data-placeholder="Input urutan hero..." multiple style="width: 100%;">
+              <option value="[0,0,0,0,1,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0.4,0.7,0.1,0.1]">Miya</option>
+              <option value="[0,0,1,1,0,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0.2,0.3,0.8,0.1]">Balmond</option>
+              <option value="[1,0,1,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0.6,0.6,0.2,0.1]">Saber</option>
+              <option value="[0,1,1,1,0,1,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0.7,0.5,0.5,0.7]">Alice</option>
+              <option value="[1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1.0,0.6,0.5,0.1]">Nana</option>
+              <option value="[1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1.0,0.1,0.8,0.1]">Tigreal</option>
+              <option value="[0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0.1,0.5,0.5,0.4]">Alucard</option>
+              <option value="[0,0,1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0.1,0.7,0.5,0.4]">Karina</option>
+              <option value="[1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0.9,0.3,0.9,0.3]">Akai</option>
+              <option value="[1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1.0,0.1,0.8,0.2]">Franco</option>
+              <option value="[0,0,1,1,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0.4,0.6,0.5,0.3]">Bane</option>
+              <option value="[0,0,1,0,1,0,0,0,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0.2,0.6,0.2,0.5]">Bruno</option>
+              <option value="[0,0,0,0,1,0,0,0,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0.4,0.7,0.3,0.7]">Clint</option>
+              <option value="[1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0.7,0.2,0.6,0.2]">Rafaela</option>
+              <option value="[0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0.8,0.8,0.1,0.1]">Eudora</option>
+              <option value="[0,0,1,1,0,0,1,1,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0.6,0.5,0.2,0.1]">Zilong</option>
+              <option value="[0,0,1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0.1,0.7,0.6,1.0]">Fanny</option>
+              <option value="[0,0,0,0,1,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0.8,0.1,0.1]">Layla</option>
+              <option value="[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0.8,0.1,1.0,0.4]">Minotaur</option>
+              <option value="[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0.9,0.1,1.0,0.4]">Lolita</option>
+              <option value="[0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0.1,0.6,0.4,0.5]">Hayabusa</option>
+              <option value="[0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0.5,0.5,0.6,0.5]">Freya</option>
+              <option value="[0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0.8,0.7,0.1,0.2]">Gord</option>
+              <option value="[1,0,1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0.6,0.6,0.1,0.9]">Natalia</option>
+              <option value="[0,1,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0.4,0.9,0.3,0.8]">Kagura</option>
+              <option value="[1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0.8,0.3,0.5,0.7]">Chou</option>
+              <option value="[0,0,1,1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0.1,0.5,0.5,0.3]">Sun</option>
+              <option value="[0,0,1,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0.7,0.4,0.6,0.1]">Alpha</option>
+              <option value="[1,0,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0.9,0.2,0.9,0.4]">Ruby</option>
+              <option value="[0,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0.2,0.9,0.4,0.7]">Yi Sun-shin</option>
+              <option value="[0,0,0,0,1,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0.6,0.6,0.2,0.5]">Moskov</option>
+              <option value="[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0.9,0.3,0.8,0.5]">Johnson</option>
+              <option value="[0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0.7,1.0,0.3,0.6]">Cyclops</option>
+              <option value="[1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0.2,0.1,0.7,0.3]">Estes</option>
+              <option value="[1,0,0,1,0,1,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0.4,0.4,0.9,0.4]">Hilda</option>
+              <option value="[1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0.9,0.9,0.1,0.3]">Aurora</option>
+              <option value="[0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0.4,0.4,0.8,0.5]">Lapu-Lapu</option>
+              <option value="[0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0.5,0.9,0.2,0.1]">Vexana</option>
+              <option value="[0,0,1,0,1,0,1,0,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0.1,0.4,0.6,0.5]">Roger</option>
+              <option value="[0,0,0,0,1,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0.8,0.3,0.4]">Karrie</option>
+              <option value="[1,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0.9,0.3,0.9,0.1]">Gatotkaca</option>
+              <option value="[0,1,1,0,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0.1,0.9,0.3,0.6]">Harley</option>
+              <option value="[0,0,0,0,1,0,0,0,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0.1,0.8,0.1,0.5]">Irithel</option>
+              <option value="[1,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0.8,0.4,0.9,0.6]">Grock</option>
+              <option value="[0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0.5,0.5,0.7,0.6]">Argus</option>
+              <option value="[0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0.7,1.0,0.3,0.2]">Odette</option>
+              <option value="[0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0.2,0.5,0.4,0.5]">Lancelot</option>
+              <option value="[1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0.2,0.4,0.4,0.5]">Diggie</option>
+              <option value="[1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0.8,0.2,1.0,0.3]">Hylos</option>
+              <option value="[0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0.4,1.0,0.1,0.4]">Zhask</option>
+              <option value="[1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0.5,0.5,0.3,0.5]">Helcurt</option>
+              <option value="[0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0.5,0.9,0.2,0.3]">Pharsa</option>
+              <option value="[0,0,0,0,1,0,0,1,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0.2,0.7,0.1,0.4]">Lesley</option>
+              <option value="[1,0,1,1,0,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0.6,0.3,0.6,0.5]">Jawhead</option>
+              <option value="[1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0.5,0.2,0.3,0.5]">Angela</option>
+              <option value="[0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0.1,0.9,0.3,0.8]">Gusion</option>
+              <option value="[1,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0.7,0.7,0.2,0.4]">Valir</option>
+              <option value="[0,0,1,1,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0.5,0.3,0.6,0.4]">Martis</option>
+              <option value="[1,0,1,1,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0.2,0.2,1.0,0.3]">Uranus</option>
+              <option value="[0,0,0,0,1,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0.8,0.7,0.2,0.1]">Hanabi</option>
+              <option value="[0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0.2,0.8,0.4,0.3]">Chang'e</option>
+              <option value="[1,0,1,1,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0.6,0.6,0.3,0.7]">Kaja</option>
+              <option value="[1,1,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1.0,0.7,0.3,0.7]">Selena</option>
+              <option value="[0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0.5,0.3,0.7,0.6]">Aldous</option>
+              <option value="[0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0.1,0.6,0.3,0.6]">Claude</option>
+              <option value="[0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0.7,1.0,0.2,0.2]">Vale</option>
+              <option value="[0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0.3,0.5,0.7,0.6]">Leomord</option>
+              <option value="[0,1,1,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0.2,0.9,0.3,0.9]">Lunox</option>
+              <option value="[0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0.2,0.8,0.7,0.8]">Hanzo</option>
+              <option value="[1,0,0,1,0,1,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,1.0,0.4,0.9,0.1]">Belerick</option>
+              <option value="[0,1,1,0,1,0,0,0,1,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0.1,1.0,0.2,0.9]">Kimmy</option>
+              <option value="[0,0,1,1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0.2,0.4,0.7,0.4]">Thamuz</option>
+              <option value="[0,1,1,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0.1,0.5,0.4,0.5]">Harith</option>
+              <option value="[1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0.8,0.4,0.6,0.4]">Minsitthar</option>
+              <option value="[1,1,0,0,0,0,0,1,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0.8,0.8,0.4,0.6]">Kadita</option>
+              <option value="[1,1,0,0,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0.1,0.6,0.4,0.4]">Faramis</option>
+              <option value="[0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0.5,0.7,0.4,0.1]">Badang</option>
+              <option value="[1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,1.0,0.2,0.9,0.5]">Khufra</option>
+              <option value="[0,0,1,0,1,0,0,0,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0.1,0.7,0.3,0.4]">Granger</option>
+              <option value="[1,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0.7,0.5,0.4,0.4]">Guinevere</option>
+              <option value="[0,0,1,1,0,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0.6,0.3,0.9,0.6]">Esmeralda</option>
+              <option value="[0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0.4,0.3,0.9,0.2]">Terizla</option>
+              <option value="[0,0,1,1,0,0,1,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0.1,0.3,0.8,0.4]">X.Borg</option>
+              <option value="[0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0.3,0.6,0.5,0.7]">Ling</option>
+              <option value="[0,0,1,1,0,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0.2,0.5,0.5,0.4]">Dyrroth</option>
+              <option value="[0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0.2,1.0,0.5,0.5]">Lylia</option>
+              <option value="[1,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0.6,0.3,1.0,0.2]">Baxia</option>
+              <option value="[1,0,1,1,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0.1,0.3,0.8,0.4]">Masha</option>
+              <option value="[0,0,0,0,1,0,0,0,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0.3,0.6,0.2,0.6]">Wanwan</option>
+              <option value="[1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0.7,0.4,0.5,0.2]">Silvanna</option>
+              <option value="[1,0,1,1,0,1,0,0,0,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0.8,0.2,0.9,0.4]">Carmilla</option>
+              <option value="[0,1,0,0,1,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0.5,1.0,0.4,0.4]">Cecilion</option>
+              <option value="[1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0.9,0.1,0.8,0.5]">Atlas</option>
+              <option value="[1,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0.7,0.7,0.3,0.5]">Popol and Kupa</option>
+              <option value="[0,0,0,1,0,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0.7,0.4,0.7,0.7]">Yu Zhong</option>
+              <option value="[0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0.4,1.0,0.2,0.5]">Luo Yi</option>
+              <option value="[0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0.2,0.5,0.6,0.7]">Benedetta</option>
+              <option value="[0,0,0,1,0,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0.5,0.5,0.8,0.5]">Khaleed</option>
+              <option value="[0,0,1,1,0,1,1,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0.9,0.3,1.0,0.4]">Barats</option>
+              <option value="[0,0,0,0,1,0,0,0,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0.5,0.7,0.4,0.5]">Brody</option>
+              <option value="[0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0.4,0.8,0.4,0.7]">Yve</option>
+              <option value="[1,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0.4,0.2,0.8,0.4]">Mathilda</option>
+              <option value="[0,0,1,1,0,0,1,1,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0.4,0.5,0.6,0.8]">Paquito</option>
+              <option value="[1,0,0,1,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1.0,0.3,1.0,0.7]">Gloo</option>
+              <option value="[0,0,0,0,1,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0.8,0.3,0.7]">Beatrix</option>
+              <option value="[0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0.3,0.7,0.8,0.3]">Phoveus</option>
+              <option value="[0,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0.2,0.6,0.2,0.2]">Natan</option>
+              <option value="[0,0,1,1,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0.1,0.6,0.6,0.4]">Aulus</option>
+              <option value="[0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0.1,0.7,0.3,0.5]">Aamon</option>
+              <option value="[1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0.8,0.9,0.5,0.8]">Floryn</option>
+              <option value="[0,1,0,1,0,0,0,0,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0.8,0.9,0.5,0.8]">Valentina</option>
+              <option value="[1,0,0,1,0,1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0.3,0.7,0.3]">Edith</option>
+              <option value="[0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0.8,0.6,0.5,0.4]">Yin</option>
+              <option value="[0,0,0,0,1,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0.4,0.9,0.2,0.4]">Melissa</option>
+              <option value="[0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0.8,1.0,0.2,0.3]">Xavier</option>
+              <option value="[0,0,1,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0.7,0.6,0.6,0.2]">Julian</option>
+              <option value="[0,0,1,1,0,1,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0.6,0.5,0.8,0.4]">Fredrinn</option>
+              <option value="[0,1,1,1,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0.1,0.7,0.3,0.9]">Joy</option>
+              <option value="[1,0,1,1,0,0,1,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0.3,0.9,0.3,0.6]">Arlott</option>
+              <option value="[1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0.3,0.9,0.3,0.6]">Novaria</option>
+              <option value="[0,0,0,0,1,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0.5,0.7,0.3,0.4]">Ixia</option>
+              <option value="[0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0.2,0.6,0.3,0.6]">Nolan</option>
+              <option value="[0,0,0,1,0,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0.3,0.6,0.5,0.2]">Cici</option>
+            </select>
+
+            <div class="card mb-4 mt-3">
+              <div class="card-body">
+                <p id="input"></p>
+              </div>
+            </div>
+          </div>
+  
+  
+          <div class="card-footer d-flex justify-content-end">
+            <button type="button" onclick="submitData()" class="btn btn-md btn-primary">Submit</button>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include jQuery and Chosen.js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
