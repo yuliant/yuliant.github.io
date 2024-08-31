@@ -89,6 +89,7 @@ $(document).ready(function () {
           type: 'POST',
           contentType: 'application/json',
           data: JSON.stringify(dataToSend),
+          crossDomain: true,
           success: function (response) {
             responseElement.text('API Response: ' + JSON.stringify(response));
           },
