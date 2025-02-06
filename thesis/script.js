@@ -73,7 +73,7 @@ $(document).ready(function () {
         const dataToSend = { 
           ban: banArray,
           input: combinedArray,
-          method: $('#metode').val(),
+          // method: $('#metode').val(),
           length: combinedArray.length
         };
 
@@ -90,7 +90,7 @@ $(document).ready(function () {
           contentType: 'application/json',
           data: JSON.stringify(dataToSend),
           success: function (response) {
-            responseElement.text('API Response: ' + JSON.stringify(response));
+            responseElement.text(JSON.stringify(response));
           },
           error: function (error) {
             responseElement.text('API Error: ' + JSON.stringify(error));
