@@ -89,8 +89,40 @@ $(document).ready(function () {
           type: 'POST',
           contentType: 'application/json',
           data: JSON.stringify(dataToSend),
+          beforeSend: function () {
+            $("#card-container").empty(); // Kosongkan container sebelum load data
+            responseElement.text('Loading ...');
+          },
           success: function (response) {
             responseElement.text(JSON.stringify(response));
+
+            // Memuat JSON lokal berisi nama hero dan URL gambar
+            $.getJSON("hero.json", function(heroData) {
+              let heroes = response.prediction; // Ambil array hero dari response API
+              let cardContainer = $("#card-container"); // Elemen tempat menampung card
+
+              cardContainer.empty(); // Hapus isi sebelumnya jika ada
+
+              // Loop untuk membuat card hero
+              heroes.forEach(hero => {
+                let heroInfo = heroData.find(h => h.name === hero); // Cari data hero di JSON
+
+                if (heroInfo) { // Jika hero ditemukan di JSON
+                  let cardHtml = `
+                    <div class="col-6 mb-3">
+                      <div class="card">
+                        <img src="${heroInfo.image}" class="card-img-top" alt="${hero}" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                          <h5 class="card-title">${hero}</h5>
+                        </div>
+                      </div>
+                    </div>
+                  `;
+                  cardContainer.append(cardHtml); // Tambahkan card ke container
+                }
+              });
+              $("#loading").hide(); // Sembunyikan loading setelah data selesai ditampilkan
+            });
           },
           error: function (error) {
             responseElement.text('API Error: ' + JSON.stringify(error));
